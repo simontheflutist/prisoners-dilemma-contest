@@ -30,4 +30,11 @@ public abstract class PrisonerPlayer {
      * @param oppMove
      */
     public abstract void processOpponentMove(boolean oppMove);
+
+    /**
+     * Resets the state of the prisoner.
+     */
+    public void reset() {
+    }
+
 }

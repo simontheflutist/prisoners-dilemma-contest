@@ -30,4 +30,8 @@ public class CopyMovePrisonerMean extends PrisonerPlayer {
         this.nextMove = oppMove;
     }
 
+    @Override
+    public void reset() {
+        this.nextMove = false;
+    }
 }
