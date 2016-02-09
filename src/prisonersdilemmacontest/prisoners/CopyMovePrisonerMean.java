@@ -9,7 +9,7 @@ import prisonersdilemmacontest.PrisonerPlayer;
 
 /**
  * This prisoner simply copies the previous move. If forced to move first, he
- * plays nice.
+ * plays mean.
  *
  * @author simon
  */
