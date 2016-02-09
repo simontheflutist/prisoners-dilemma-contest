@@ -14,5 +14,5 @@ public abstract class PrisonerPlayer {
 
     public abstract boolean nextMove();
 
-    public abstract void processOpponentMove();
+    public abstract void processOpponentMove(boolean oppMove);
 }

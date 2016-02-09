@@ -14,7 +14,7 @@ public class PrisonersDilemmaContest {
         }
 
         @Override
-        public void processOpponentMove() {
+        public void processOpponentMove(boolean oppMove) {
             // Opponent's move doesn't matter
         }
 
