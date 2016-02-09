@@ -1,22 +1,12 @@
 package prisonersdilemmacontest;
 
+import java.util.Arrays;
+import prisonersdilemmacontest.prisoners.RandomPrisoner;
+
 public class PrisonersDilemmaContest {
 
     public static void main(String[] args) {
-
-    }
-
-    private final class RandomPlayer extends PrisonerPlayer {
-
-        @Override
-        public boolean nextMove() {
-            return random.nextBoolean();
-        }
-
-        @Override
-        public void processOpponentMove(boolean oppMove) {
-            // Opponent's move doesn't matter
-        }
-
+        TwoPlayerGame game = new TwoPlayerGame(new RandomPrisoner(), new RandomPrisoner());
+        System.out.println(Arrays.toString(game.play()));
     }
 }
