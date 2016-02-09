@@ -74,9 +74,9 @@ public class RoundRobinTournament {
                 }
 
                 System.out.println(
-                        ScoredPrisoner1.getPrisoner().getClass().getName()
+                        ScoredPrisoner1.getPrisoner().getClass().getSimpleName()
                         + " vs. "
-                        + ScoredPrisoner2.getPrisoner().getClass().getName()
+                        + ScoredPrisoner2.getPrisoner().getClass().getSimpleName()
                         + ": "
                         + Arrays.toString(account));
 
@@ -88,7 +88,7 @@ public class RoundRobinTournament {
         // now print the results
         System.out.println("\nRESULTS:");
         for (ScoredPrisoner sp : prisoners) {
-            System.out.println(sp.getPrisoner().getClass().getName() + " " + sp.getScore());
+            System.out.println(sp.getPrisoner().getClass().getSimpleName() + " " + sp.getScore());
         }
     }
 
