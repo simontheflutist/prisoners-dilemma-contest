@@ -24,6 +24,7 @@ public final class TwoPlayerGame {
      * the second number is player2's score
      */
     public double[] play() {
+        // the following coin flip isn't used in the algorithm anyway, but we might change our plans, so let's keep it
         boolean player1first = Math.random() < 0.5;
         PrisonerPlayer playerA = player1first ? player1 : player2;
         PrisonerPlayer playerB = player1first ? player2 : player1;
