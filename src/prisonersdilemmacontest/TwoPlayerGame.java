@@ -8,7 +8,7 @@ package prisonersdilemmacontest;
 public final class TwoPlayerGame {
 
     public static final short NUMBER_OF_ROUNDS = 10;
-    public static final double[][] ROUND_OUTCOMES = new double[][]{{2, 5}, {5, 2}};
+    public static final double[][][] ROUND_OUTCOMES = new double[][][]{{{2, 2}, {5, 0}}, {{0, 5}, {0, 0}}};
 
     private final PrisonerPlayer player1, player2;
 
