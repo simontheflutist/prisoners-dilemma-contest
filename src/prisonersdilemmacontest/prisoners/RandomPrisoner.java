@@ -8,6 +8,7 @@ package prisonersdilemmacontest.prisoners;
 import prisonersdilemmacontest.PrisonerPlayer;
 
 /**
+ * This prisoner acts randomly.
  *
  * @author simon
  */
