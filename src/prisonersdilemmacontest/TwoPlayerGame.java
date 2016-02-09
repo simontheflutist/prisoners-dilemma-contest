@@ -33,11 +33,10 @@ public final class TwoPlayerGame {
         int roundCount = 0;
         do {
             boolean currentMoveA = playerA.nextMove();
-            playerB.processOpponentMove(currentMoveA);
-
-            // playerB can have an advantage, for example, if he is move-copying
             boolean currentMoveB = playerB.nextMove();
+
             playerA.processOpponentMove(currentMoveB);
+            playerB.processOpponentMove(currentMoveA);
 
             double[] d_score = ROUND_OUTCOMES[currentMoveA ? 1 : 0][currentMoveB ? 1 : 0];
 
