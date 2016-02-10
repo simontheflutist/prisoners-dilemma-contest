@@ -6,7 +6,6 @@
 package prisonersdilemmacontest;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -77,8 +76,11 @@ public class RoundRobinTournament {
                         ScoredPrisoner1.getPrisoner().getClass().getSimpleName()
                         + " vs. "
                         + ScoredPrisoner2.getPrisoner().getClass().getSimpleName()
-                        + ": "
-                        + Arrays.toString(account));
+                        + ": ["
+                        + formatScore(account[0])
+                        + ", "
+                        + formatScore(account[1])
+                        + "]");
 
                 ScoredPrisoner1.addToScore(account[0]);
                 ScoredPrisoner2.addToScore(account[1]);
@@ -88,8 +90,11 @@ public class RoundRobinTournament {
         // now print the results
         System.out.println("\nRESULTS:");
         for (ScoredPrisoner sp : prisoners) {
-            System.out.println(sp.getPrisoner().getClass().getSimpleName() + " " + sp.getScore() / len);
+            System.out.println(sp.getPrisoner().getClass().getSimpleName() + " " + formatScore(sp.getScore() / len));
         }
     }
 
+    private String formatScore(double score) {
+        return String.format("%3.2f", score);
+    }
 }
