@@ -26,20 +26,15 @@ public final class TwoPlayerGame {
      * the second number is player2's score
      */
     public double[] play() {
-        // the following coin flip isn't used in the algorithm anyway, but we might change our plans, so let's keep it
-        boolean player1first = Math.random() < 0.5;
-        PrisonerPlayer playerA = player1first ? player1 : player2;
-        PrisonerPlayer playerB = player1first ? player2 : player1;
-
         final double[] tally = new double[]{0, 0};
 
         int roundCount = 0;
         do {
-            boolean currentMoveA = playerA.nextMove();
-            boolean currentMoveB = playerB.nextMove();
+            boolean currentMoveA = player1.nextMove();
+            boolean currentMoveB = player2.nextMove();
 
-            playerA.processOpponentMove(currentMoveB);
-            playerB.processOpponentMove(currentMoveA);
+            player1.processOpponentMove(currentMoveB);
+            player2.processOpponentMove(currentMoveA);
 
             // if true, then NICE
             double[] d_score = ROUND_OUTCOMES[currentMoveA ? 0 : 1][currentMoveB ? 0 : 1];
@@ -50,6 +45,6 @@ public final class TwoPlayerGame {
             roundCount++;
         } while (roundCount < NUMBER_OF_ROUNDS);
 
-        return player1first ? tally : new double[]{tally[1], tally[0]};
+        return tally;
     }
 }
