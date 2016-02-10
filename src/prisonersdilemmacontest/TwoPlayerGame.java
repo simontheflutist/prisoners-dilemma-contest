@@ -39,7 +39,8 @@ public final class TwoPlayerGame {
             playerA.processOpponentMove(currentMoveB);
             playerB.processOpponentMove(currentMoveA);
 
-            double[] d_score = ROUND_OUTCOMES[currentMoveA ? 1 : 0][currentMoveB ? 1 : 0];
+            // if true, then NICE
+            double[] d_score = ROUND_OUTCOMES[currentMoveA ? 0 : 1][currentMoveB ? 0 : 1];
 
             tally[0] += d_score[0];
             tally[1] += d_score[1];
