@@ -56,6 +56,6 @@ public class MayaPrisoner extends PrisonerPlayer {
     public void reset() {
         myPoints = 0;           //Reset point values.
         oppPoints = 0;
+        roundCount = 0;
     }
-
 }
