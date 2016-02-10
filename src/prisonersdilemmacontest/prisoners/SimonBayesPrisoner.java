@@ -18,6 +18,11 @@ public class SimonBayesPrisoner extends PrisonerPlayer {
     private int n = 0, m = 0;
 
     @Override
+    public void reset() {
+        n = m = 0;
+    }
+
+    @Override
     public boolean nextMove() {
         double u = (m + 1) / (n + m + 2);
         return random.nextDouble() < u;
