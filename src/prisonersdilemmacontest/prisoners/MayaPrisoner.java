@@ -24,8 +24,10 @@ public class MayaPrisoner extends PrisonerPlayer {
 
     @Override
     public boolean nextMove() {
-        if (roundCount == 9) {
-            this.nextMove = false;              //If program is on tenth round, be mean.
+        roundCount++;
+
+        if (roundCount == 10) {
+            this.nextMove = false;             //If program is on tenth round, be mean.
         } else if (myPoints == oppPoints) {
             this.nextMove = true;    //If points for match are the same, be nice.
         } else {
@@ -47,7 +49,7 @@ public class MayaPrisoner extends PrisonerPlayer {
             myPoints += 5;
         }             //If I am mean and opp. is nice, I get 5 points.
         //If both are mean, nothing changes (both get 0).
-        roundCount++;
+
     }
 
     @Override
@@ -55,4 +57,5 @@ public class MayaPrisoner extends PrisonerPlayer {
         myPoints = 0;           //Reset point values.
         oppPoints = 0;
     }
+
 }
