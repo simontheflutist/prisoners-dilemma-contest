@@ -40,7 +40,7 @@ public class RoundRobinTournament {
 
     }
 
-    public static int GAMES_PER_SET = 1000;
+    public static int GAMES_PER_SET = 10000;
 
     private final List<ScoredPrisoner> prisoners;
 
@@ -88,7 +88,7 @@ public class RoundRobinTournament {
         }
 
         // now print the results
-        System.out.println("\nRESULTS:");
+        System.out.println("\nRESULTS: (" + GAMES_PER_SET + "x" + TwoPlayerGame.NUMBER_OF_ROUNDS + ")");
         for (ScoredPrisoner sp : prisoners) {
             System.out.println(sp.getPrisoner().getClass().getSimpleName() + " " + formatScore(sp.getScore() / len));
         }
