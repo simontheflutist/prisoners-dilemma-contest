@@ -40,7 +40,7 @@ public class RoundRobinTournament {
 
     }
 
-    public static int GAMES_PER_SET = 1000000;
+    public static int GAMES_PER_SET = 100000;
 
     private final List<ScoredPrisoner> prisoners;
 
